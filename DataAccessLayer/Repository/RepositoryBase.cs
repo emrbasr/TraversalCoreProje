@@ -17,16 +17,16 @@ namespace DataAccess.Repository
 
         public T GetById(int id)
         {
-            //using var context = new Context();
-            //return context.Set<T>().Find(id);
-            throw new NotImplementedException();
+            using var context = new Context();
+            return context.Set<T>().Find(id);
+           
         }
 
         public List<T> GetList()
         {
-            //using var c = new Context();
-            //return c.Set<T>().ToList();
-            throw new NotImplementedException();
+            using var c = new Context();
+            return c.Set<T>().ToList();
+            
         }
 
         public void Insert(T entity)
