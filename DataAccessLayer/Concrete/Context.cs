@@ -1,6 +1,7 @@
 ﻿
 using Entity.Concrete;
-
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete
 {
-    public class Context:DbContext
+    public class Context : IdentityDbContext<AppUser, AppRole, int>
     {
         public DbSet<About> Abouts { get; set; }
         public DbSet<About2> Abouts2 { get; set; }

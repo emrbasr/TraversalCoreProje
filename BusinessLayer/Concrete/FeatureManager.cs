@@ -1,4 +1,5 @@
-﻿using DataAccess.Abstract;
+﻿using BusinessLayer.Abstract;
+using DataAccess.Abstract;
 using Entity.Concrete;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Business.Concrete
 {
-    public class FeatureManager : IFeatureDal
+    public class FeatureManager : IFeatureService
     {
         IFeatureDal _featureDal;
 
@@ -17,29 +18,31 @@ namespace Business.Concrete
             _featureDal = featureDal;
         }
 
-        public void Delete(Feature entity)
+        public void TAdd(Feature entity)
         {
             throw new NotImplementedException();
         }
 
-        public Feature GetById(int id)
+        public void TDelete(Feature entity)
         {
             throw new NotImplementedException();
         }
 
-        public List<Feature> GetList()
-        {
-          return _featureDal.GetList();
-        }
-
-        public void Insert(Feature entity)
+        public Feature TGetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Feature entity)
+        public List<Feature> TGetList()
+        {
+           return _featureDal.GetList();
+        }
+
+        public void TUpdate(Feature entity)
         {
             throw new NotImplementedException();
         }
     }
+
+    
 }

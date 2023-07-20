@@ -3,6 +3,7 @@ using DataAccess.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,6 +14,12 @@ namespace DataAccess.Repository
         public void Delete(T entity)
         {
             throw new NotImplementedException();
+        }
+
+        public List<T> GetListByFilter(Expression<Func<T, bool>> filter = null)
+        {
+            using var c = new Context();
+            return c.Set<T>().Where(filter).ToList();
         }
 
         public T GetById(int id)
@@ -31,7 +38,9 @@ namespace DataAccess.Repository
 
         public void Insert(T entity)
         {
-            throw new NotImplementedException();
+            using var c = new Context();
+            c.Add(entity);
+            c.SaveChanges();
         }
 
         public void Update(T entity)
