@@ -130,6 +130,10 @@
     <None Include="wwwroot\Login_v1\vendor\select2\select2.min.css" />
     <None Include="wwwroot\Login_v1\vendor\select2\select2.min.js" />
     <None Include="wwwroot\Login_v1\vendor\tilt\tilt.jquery.min.js" />
+    <None Include="wwwroot\web\css\style.css" />
+    <None Include="wwwroot\web\images\banner1.jpg" />
+    <None Include="wwwroot\web\index.html" />
+    <None Include="wwwroot\web\w3layouts-license.txt" />
   </ItemGroup>
 
   <ItemGroup>
@@ -150,6 +154,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Member\Data\" />
+    <Folder Include="Areas\Member\Models\" />
   </ItemGroup>
 
 </Project>
