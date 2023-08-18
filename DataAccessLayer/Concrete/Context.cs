@@ -1,5 +1,6 @@
 ﻿
 using Entity.Concrete;
+using EntityLayer.Concrete;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +25,7 @@ namespace DataAccess.Concrete
         public DbSet<SubAbout> SubAbouts { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
         public DbSet<Command> Commands { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
 
         public Context()
         {
